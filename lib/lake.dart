@@ -70,15 +70,16 @@ class Lake extends StatelessWidget {
         ),
         body: ListView(
           children: [
+            Image.asset('images/lake.jpg',
+                width: 600, height: 240, fit: BoxFit.cover),
+            titleSection,
+            buttonSection,
+            textSection,
             Image.network(
-                // 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2020-10-12%2F5f83b7c13d0b9.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657454453&t=5f0c0a85ba519979d31cb32fd78c63e3',
                 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2020-07-21%2F5f16b2eb2fbc4.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657454791&t=ff362cca9b2719db785486b99d6649fa',
                 width: 600,
                 height: 240,
                 fit: BoxFit.cover),
-            titleSection,
-            buttonSection,
-            textSection,
           ],
         ),
       ),
