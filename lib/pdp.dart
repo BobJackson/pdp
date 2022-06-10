@@ -45,7 +45,9 @@ class Pdp extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ElevatedButton(onPressed: goToPlay, child: const Text('开始答题')),
+          ElevatedButton(onPressed: () {
+            Navigator.pushNamed(context, '/page1');
+          }, child: const Text('开始答题')),
         ],
       ),
     );
@@ -78,7 +80,4 @@ class Pdp extends StatelessWidget {
     );
   }
 
-  void goToPlay() {
-    print('Clicked !');
-  }
 }
