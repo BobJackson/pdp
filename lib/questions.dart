@@ -51,6 +51,17 @@ class _QuestionsState extends State<Questions> {
     var endIndex = 5 * (page);
     var beforePage = page - 1;
     var nextPage = page + 1;
+
+    Widget questionSection = Row(
+      children: [
+        _buildQuestionRow(page, 1),
+        _buildQuestionRow(page, 2),
+        _buildQuestionRow(page, 3),
+        _buildQuestionRow(page, 4),
+        _buildQuestionRow(page, 5),
+      ],
+    );
+
     return MaterialApp(
       title: 'Page$page',
       home: Scaffold(
@@ -79,6 +90,39 @@ class _QuestionsState extends State<Questions> {
         ),
         body: const Text('will show questions bellow...'),
       ),
+    );
+  }
+
+  Widget _buildQuestionRow(int page, int rowIndex) {
+    var _question1 = 3;
+
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('A'),
+          leading: Radio<int>(
+            value: 5,
+            groupValue: _question1,
+            onChanged: (int? value) {
+              setState(() {
+                _question1 = value!;
+              });
+            },
+          ),
+        ),
+        ListTile(
+          title: const Text('B'),
+          leading: Radio<int>(
+            value: 4,
+            groupValue: _question1,
+            onChanged: (int? value) {
+              setState(() {
+                _question1 = value!;
+              });
+            },
+          ),
+        ),
+      ],
     );
   }
 }
