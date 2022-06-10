@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'mylake.dart';
+import 'pdp.dart';
 
 void main() {
-  // runApp(const Lake());
-  runApp(const MyLake());
+  runApp(const Pdp());
 }
